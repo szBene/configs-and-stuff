@@ -23,7 +23,7 @@ function Show-History { Get-Content (Get-PSReadLineOption).HistorySavePath }
 Set-Alias -Name history -Value Show-History
 
 # change network settings
-Set-Alias -Name chnet -Value .\chnet.bat
+Set-Alias -Name chnet -Value "$env:USERPROFILE\chnet.bat"
 
 # alias for micro editor
 Set-Alias -Name m -Value micro
