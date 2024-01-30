@@ -12,8 +12,11 @@ Import-Module "$env:LOCALAPPDATA\PowerToys\WinUI3Apps\..\WinGetCommandNotFound.p
 # SET COMMAND ALIASES AND STUFF
 
 # reload powershell profile (by reloading powershell)
-function reload { pwsh }
+function psreload { pwsh }
 #function reload { . $PROFILE } # this doesnt work for some reason
+
+# edit this profile with micro
+function psedit { micro $PROFILE }
 
 # alias for clearing the terminal
 Set-Alias -Name clear -Value cls
@@ -95,5 +98,26 @@ function getproc($name){
 # create file
 function mkfile($fn){
 	"" >> $fn #if file exists, appends an empty string to its content
+}
+function showwifi($name){
+	netsh wlan show profile name=$name key=clear
+}
+
+# optimize video without changing framerate and resolution
+function optvid ( $video, $outname, $quality = 'high' ){
+
+	$crf = switch ($quality) {
+		'ultrahigh'	{ 0 }
+		'extrahigh'	{ 10 }
+		'high'		{ 20 }
+		'mid'  		{ 28 }
+		'low'  		{ 32 }
+		'extralow'  { 36 }
+	}
+	
+	echo "Optimizing $video to $quality ($crf)"
+	echo "The video will be saved as $outname"
+	
+	ffmpeg -i $video -vcodec libx265 -crf $crf "$outname"
 }
 #--------------------
