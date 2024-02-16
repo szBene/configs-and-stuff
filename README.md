@@ -5,4 +5,4 @@ configs and stuff for my stuff
 
 ___
 
-- the poweshell profile requires powershell 7
+- parts of the poweshell profile require powershell 7
