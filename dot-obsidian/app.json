@@ -1,0 +1,8 @@
+{
+  "spellcheck": true,
+  "useMarkdownLinks": true,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./",
+  "showUnsupportedFiles": true,
+  "showLineNumber": true
+}

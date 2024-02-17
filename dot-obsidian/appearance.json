@@ -1,0 +1,9 @@
+{
+  "accentColor": "#2d398f",
+  "interfaceFontFamily": "Inter",
+  "monospaceFontFamily": "JetBrains Mono",
+  "textFontFamily": "Inter",
+  "cssTheme": "Proper Dark",
+  "theme": "system",
+  "translucency": false
+}
