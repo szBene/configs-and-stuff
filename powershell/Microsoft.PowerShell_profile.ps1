@@ -157,7 +157,7 @@ if ( ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]
 }
 
 # fastfetch, just to be fancy
-C:\Users\szBene\.fastfetch\fastfetch.exe -c C:\Users\szBene\.fastfetch\config.jsonc
+& "$env:USERPROFILE\.fastfetch\fastfetch.exe" -c "$env:USERPROFILE\.fastfetch\config.jsonc"
 
 # load oh my posh 
 oh-my-posh init pwsh --config "$env:USERPROFILE\clean-detailed.omp.json" | Invoke-Expression
